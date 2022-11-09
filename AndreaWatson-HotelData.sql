@@ -94,3 +94,18 @@ INSERT INTO Reservations (`ReservationID`,`Adults`,`Children`,`StartDate`,`EndDa
 INSERT INTO Reservations (`ReservationID`,`Adults`,`Children`,`StartDate`,`EndDate`,`TotalCost`,`RoomNumber`,`GuestNameID`) VALUES (24,2,2,'2023-11-22','2023-11-25',599.97,301,2);
 INSERT INTO Reservations (`ReservationID`,`Adults`,`Children`,`StartDate`,`EndDate`,`TotalCost`,`RoomNumber`,`GuestNameID`) VALUES (25,2,0,'2023-12-24','2023-12-28',699.96,302,11);
 
+SET SQL_SAFE_UPDATES = 0;
+
+DELETE FROM Reservations
+WHERE GuestNameID = 8;
+
+DELETE FROM Guests
+WHERE GuestID = 8;
+
+DELETE FROM Addresses
+WHERE AddressID = 8;
+
+DELETE FROM PhoneNumbers
+WHERE PhoneNumberID = 8;
+
+SET SQL_SAFE_UPDATES = 1;
